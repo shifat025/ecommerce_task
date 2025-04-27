@@ -26,3 +26,18 @@ class ProductViewSet(viewsets.ModelViewSet):
     def perform_create(self, serializer):
         vendor = Vendor.objects.get(user=self.request.user)
         serializer.save(vendor=vendor)
+
+
+class ProductPublicViewSet(viewsets.ModelViewSet):
+    serializer_class = ProductSerializer
+    http_method_names = ['get']
+    pagination_class = pagination.PageNumberPagination
+    filter_backends = [filters.SearchFilter, filters.OrderingFilter, DjangoFilterBackend]
+    search_fields = ['name', 'description']  # Search by name, description
+    filterset_class = ProductFilter    # Filter by price and stock
+    ordering_fields = ['price', 'created_at']  # Sort by price or created date
+
+    def get_queryset(self):
+        return Product.objects.all()
+    
+   

@@ -18,11 +18,9 @@ class VendorRegisterView(APIView):
             return Response({"message": "Vendor registered successfully."},status=status.HTTP_201_CREATED )
         return Response({"error": "Registration failed.", "errors": serializer.errors}, status=status.HTTP_400_BAD_REQUEST)
     
-
         
 class AllVendorView(APIView):
     permission_classes = [IsAuthenticated, IsAdmin]
-
     def get(self, request):
         vendors = Vendor.objects.all()
         serializer = VendorSerializer(vendors,many=True)

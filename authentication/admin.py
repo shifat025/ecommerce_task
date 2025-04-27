@@ -14,7 +14,7 @@ class CustomUserAdmin(BaseUserAdmin):
     change_password_form = AdminPasswordChangeForm
 
     fieldsets = (
-        ('Personal info', {'fields': ('email', 'first_name', 'last_name','phone',  'profile_image')}),
+        ('Personal info', {'fields': ('email', 'first_name', 'last_name','phone')}),
         ('Password', {'fields': ('password',)}),
         ('Permissions', {'fields': ('is_active', 'is_staff', 'role', 'groups', 'user_permissions')}),
     )

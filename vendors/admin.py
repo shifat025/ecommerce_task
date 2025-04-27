@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Vendor
+from .models import Vendor, Notification
 # Register your models here.
 
 class VendorAdmin(admin.ModelAdmin):
@@ -7,3 +7,4 @@ class VendorAdmin(admin.ModelAdmin):
     search_fields = ('store_name',)
 
 admin.site.register(Vendor, VendorAdmin)
+admin.site.register(Notification)
