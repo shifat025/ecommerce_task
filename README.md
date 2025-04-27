@@ -15,7 +15,8 @@ An advanced Django Rest Framework (DRF) based e-commerce backend system supporti
 ## 📑 Postman Documentation
 Test all API endpoints easily with the provided Postman collection:
 ### 🔗 Open in Postman
-- **Click here to open the Postman collection and test the API:** [Open in Postman](https://www.postman.com/solar-resonance-417109/ecomerce/collection/w6fulqa/vendor?action=share&creator=40710281&active-environment=40710281-87c07511-f21b-4d8f-9bbf-453cd4f231c9)
+- <span style="font-weight: bold; color: blue;">Click here to open the Postman collection and test the API:</span> <a href="https://www.postman.com/solar-resonance-417109/ecomerce/collection/w6fulqa/vendor?action=share&creator=40710281&active-environment=40710281-87c07511-f21b-4d8f-9bbf-453cd4f231c9" target="_blank" style="color: blue;">Open in Postman</a>
+
 
 
 ---
