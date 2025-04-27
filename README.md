@@ -1,12 +1,13 @@
 # 🛒 Advanced Multi-Tenant E-commerce API with Role-Based Access Control (RBAC)
 
-An advanced Django Rest Framework (DRF) based e-commerce backend system supporting multiple vendors, customers, and an admin dashboard, with secure role-based access control and JWT authentication.
+An advanced Django Rest Framework (DRF) based e-commerce backend system supporting multiple vendors, customers and  admin , with secure role-based access control and JWT authentication.
 
 ---
 
 ## 📊 ERD (Entity Relationship Diagram)
 
-![ERD Diagram](path/to/your/erd-image.png)
+<img src="https://github.com/shifat025/ecommerce_task/blob/main/ERD%20Diagram.png?raw=true" alt="ERD Diagram" width="500" height="550">
+
 
 > This diagram shows the relationships between Users, Vendors, Products, Orders, and OrderItems.
 
