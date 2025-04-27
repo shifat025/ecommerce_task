@@ -39,8 +39,7 @@ class User(AbstractBaseUser,PermissionsMixin):
     last_name = models.CharField(max_length=30)
     role = models.CharField(max_length=10, choices=ROLE_CHOICES, default='customer')
     phone = models.CharField(max_length=15, blank=True, null=True)
-    profile_image = models.ImageField(upload_to='profiles/', blank=True, null=True)
-
+  
     # Permissions
     is_active = models.BooleanField(default=True)
     is_staff = models.BooleanField(default=False)

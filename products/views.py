@@ -7,6 +7,7 @@ from rest_framework.permissions import IsAuthenticated
 from rest_framework.authentication import TokenAuthentication
 from authentication.permissions import IsVendor
 from vendors.models import Vendor
+from .filters import ProductFilter
 # Create your views here.
 
 class ProductViewSet(viewsets.ModelViewSet):
@@ -15,7 +16,7 @@ class ProductViewSet(viewsets.ModelViewSet):
     pagination_class = pagination.PageNumberPagination
     filter_backends = [filters.SearchFilter, filters.OrderingFilter, DjangoFilterBackend]
     search_fields = ['name', 'description']  # Search by name, description
-    filterset_fields = ['price', 'stock']    # Filter by price and stock
+    filterset_class = ProductFilter    # Filter by price and stock
     ordering_fields = ['price', 'created_at']  # Sort by price or created date
 
     def get_queryset(self):

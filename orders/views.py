@@ -1,4 +1,4 @@
-from rest_framework import viewsets
+from rest_framework import viewsets, pagination
 from .models import Order, OrderItem
 from .serializers import OrderSerializer, VendorOrderSerializer
 from rest_framework.permissions import IsAuthenticated
@@ -9,6 +9,7 @@ class OrderViewSet(viewsets.ModelViewSet):
     queryset = Order.objects.all()
     serializer_class = OrderSerializer
     permission_classes = [IsAuthenticated, IsCustomer]
+    pagination_class = pagination.PageNumberPagination
     http_method_names = ['get', 'post']
 
     def perform_create(self, serializer):
