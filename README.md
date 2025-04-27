@@ -30,7 +30,6 @@ Test all API endpoints easily with the provided Postman collection:
 - Admins can view/manage everything
 - Throttling and Rate Limiting
 - Pagination, Search, and Filtering
-- Optimized queries (no N+1 problems)
 - Django Signals to notify vendors on new orders
 
 ---

@@ -23,6 +23,7 @@ class VendorOrderItemViewSet(viewsets.ReadOnlyModelViewSet):
     """Vendor can view their ordered products."""
     serializer_class = VendorOrderSerializer
     permission_classes = [IsAuthenticated, IsVendor]
+    agination_class = pagination.PageNumberPagination
     http_method_names = ['get']
 
     def get_queryset(self):
