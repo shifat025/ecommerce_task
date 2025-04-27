@@ -13,8 +13,12 @@ An advanced Django Rest Framework (DRF) based e-commerce backend system supporti
 
 ---
 ## 📑 Postman Documentation
-Test all API endpoints easily through the Postman collection:
-- 🔗 Postman Collection Download
+Test all API endpoints easily with the provided Postman collection:
+### 🔗 Open in Postman
+- <span style="font-weight: bold; color: blue;">Click here to open the Postman collection and test the API:</span> <a href="https://www.postman.com/solar-resonance-417109/ecomerce/collection/w6fulqa/vendor?action=share&creator=40710281&active-environment=40710281-87c07511-f21b-4d8f-9bbf-453cd4f231c9" target="_blank" style="color: blue;">Open in Postman</a>
+
+
+
 ---
 
 ## 🚀 Features
@@ -77,6 +81,7 @@ Test all API endpoints easily through the Postman collection:
 | <kbd>POST</kbd> | `/user/login`           | Login user (returns some user data, access and refresh token) |
 | <kbd>POST</kbd> | `/user/token/`           | Obtain JWT token pair (access and refresh)  |
 | <kbd>POST</kbd> | `/user/token/refresh/`   | Refresh the access token                   |
+| <kbd>GET</kbd> | `/vendor/all/`            | To get all vendor                 |
 
 ### 🏪 Vendor APIs
 | Method | Endpoint                   | Description                                 |
@@ -90,6 +95,7 @@ Test all API endpoints easily through the Postman collection:
 | Method | Endpoint                   | Description                                 |
 |:------:|:----------------------------|:--------------------------------------------|
 | <kbd>GET</kbd> | `/products/product/`            | List all products    |
+| <kbd>GET</kbd> | `/products/allproduct/`            | List all products to access publicaly    |
 | <kbd>POST</kbd> | `/products/product/`           | Create a new product (Vendor only) |
 | <kbd>GET</kbd> | `/products/product/{id}/`       | Retrieve single product details  |
 | <kbd>PUT</kbd> | `/products/product/{id}/`       | Update a product (Vendor only)   |
@@ -108,8 +114,7 @@ Test all API endpoints easily through the Postman collection:
 | <kbd>GET</kbd> | `/order/orders/`        | List all orders (Vendor sees orders containing their products, Customer sees their own orders)    |
 | <kbd>POST</kbd> | `/order/orders/`           | Place a new order (Customer only) |
 | <kbd>GET</kbd> | `/order/orders/{id}/`           | Retrieve a specific order (Vendor/Customer depending on ownership)  |
-| <kbd>POST</kbd> | `/order/orders/{id}/`   |Update an order (optional, based on project rules)                 |
-| <kbd>POST</kbd> | `/order/orders/{id}/`   | Refresh the access token                   |
+
 
 ---
 # ✅ Notes
